@@ -20,3 +20,7 @@ export KUBECONFIG=${PWD}/kubeconfig
 
 desc "Access that cluster"
 run "kubectl get nodes"
+
+echo "Cleaning up"
+# az aks delete -g my-aks -n my-cluster --no-wait
+rm kubeconfig

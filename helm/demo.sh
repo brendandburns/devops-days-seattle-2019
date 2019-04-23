@@ -4,13 +4,15 @@
 
 run "clear"
 
-run "helm init"
+run "helm search mongodb"
 
-run "helm search mysql"
+run "cat values-production.yaml"
 
-run "helm install stable/mysql"
+run "helm install --name my-mongo -f ./values-production.yaml stable/mongodb"
 
 run "kubectl get pv"
+
+run "kubectl get statefulsets"
 
 run "kubectl get pods"
 
