@@ -1,0 +1,11 @@
+apiVersion: constraints.gatekeeper.sh/v1alpha1
+kind: RequiredLabels
+metadata:
+  name: team-must-have-metadata
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Namespace"]
+  parameters:
+    labels: ["contact", "business-unit"]
