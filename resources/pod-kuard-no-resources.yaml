@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: NAME 
+  namespace: default
+spec:
+  containers:
+  - image: gcr.io/kuar-demo/kuard-amd64:green
+    name: kuard
+    resources: {}

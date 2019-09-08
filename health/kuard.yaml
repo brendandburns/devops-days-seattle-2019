@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kuard 
+  namespace: default
+spec:
+  containers:
+  - image: gcr.io/kuar-demo/kuard-amd64:green 
+    name: kuard
+    resources: {}
+    livenessProbe:
+      httpGet:
+        path: /healthy
+        port: 8080
+        httpHeaders:
+      initialDelaySeconds: 3
+      periodSeconds: 3

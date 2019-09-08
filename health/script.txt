@@ -1,0 +1,4 @@
+kubectl create -f nginx.yaml
+kubectl exec nginx
+su kill 1
+kubectl delete -f nginx.yaml
